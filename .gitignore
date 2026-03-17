@@ -1,0 +1,20 @@
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Output data files (generated, not tracked)
+output/*.json
+output/*.csv
+output/*.md
+output/weekly/*.json
+output/weekly/*.log
+output/weekly/launchd*.log
