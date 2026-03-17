@@ -15,3 +15,7 @@ cd "$SCRIPT_DIR"
 echo "=== $(date) ===" >> "$LOG"
 "$VENV" "$SCRIPT_DIR/track.py" >> "$LOG" 2>&1
 echo "" >> "$LOG"
+
+echo "=== Eigene Posts: $(date) ===" >> "$LOG"
+"$VENV" "$SCRIPT_DIR/track_own.py" >> "$LOG" 2>&1
+echo "" >> "$LOG"

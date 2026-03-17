@@ -65,6 +65,25 @@ def main():
         ],
     )
 
+    create_table(
+        name="Eigene Posts",
+        description="Performance-Tracking der eigenen LinkedIn-Posts (wöchentlich)",
+        fields=[
+            {"name": "post_text", "type": "singleLineText",
+             "description": "Textvorschau (erste 100 Zeichen)"},
+            {"name": "datum", "type": "date", "options": {"dateFormat": {"name": "iso"}}},
+            {"name": "likes", "type": "number", "options": {"precision": 0}},
+            {"name": "comments", "type": "number", "options": {"precision": 0}},
+            {"name": "shares", "type": "number", "options": {"precision": 0}},
+            {"name": "engagement", "type": "number", "options": {"precision": 0},
+             "description": "likes + comments*2 + shares*3"},
+            {"name": "delta_engagement", "type": "number", "options": {"precision": 0},
+             "description": "Veränderung seit letztem Check"},
+            {"name": "url", "type": "url"},
+            {"name": "woche", "type": "singleLineText", "description": "z.B. 2026-W12"},
+        ],
+    )
+
     print("\nFertig!")
 
 
